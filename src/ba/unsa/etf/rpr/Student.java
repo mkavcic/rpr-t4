@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr;
 
+import java.util.ArrayList;
+
 public class Student {
     private String ime;
     private String prezime;
