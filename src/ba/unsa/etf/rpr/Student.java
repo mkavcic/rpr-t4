@@ -17,35 +17,35 @@ public class Student {
         this.semestar = semestar;
     }
 
-    public String getIme() {
+    public String dajIme() {
         return ime;
     }
 
-    public String getPrezime() {
+    public String dajPrezime() {
         return prezime;
     }
 
-    public Integer getBrojIndexa() {
+    public Integer dajBrojIndexa() {
         return brojIndexa;
     }
 
-    public Integer getEctsBodovi() {
+    public Integer dajEctsBodovi() {
         return ectsBodovi;
     }
 
-    public Semestar getSemestar() {
+    public Semestar dajSemestar() {
         return semestar;
     }
 
-    public Integer getBrojIzbornih() {
+    public Integer dajBrojIzbornih() {
         return brojIzbornih;
     }
 
-    public Integer getBrojObaveznih() {
+    public Integer dajBrojObaveznih() {
         return brojObaveznih;
     }
 
-    public ArrayList<Predmet> getPredmeti() {
+    public ArrayList<Predmet> dajPredmeti() {
         return predmeti;
     }
     public void dodajPredmet(Predmet predmet){
