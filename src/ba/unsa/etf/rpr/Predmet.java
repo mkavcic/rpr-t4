@@ -7,7 +7,7 @@ public class Predmet {
     private Integer opterecenje;
     private boolean izborni;
     private ArrayList<Student> spisak;
-    private Semestar semestar;
+    private Integer semestar;
 
     public Predmet(String ime, Integer opterecenje, boolean izborni) {
         this.ime = ime;
@@ -29,10 +29,6 @@ public class Predmet {
 
     public ArrayList<Student> dajSpisak() {
         return spisak;
-    }
-
-    public Semestar dajSemestar() {
-        return semestar;
     }
 
     public void upisi(Student student){
