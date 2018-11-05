@@ -6,13 +6,15 @@ public class Student {
     private String ime;
     private String prezime;
     private Integer brojIndexa;
-    private Integer ectsBodovi;
-    private Semestar semestar;
-    private Integer brojIzbornih;
-    private Integer brojObaveznih;
-    private ArrayList<Predmet> predmeti;
+    private Integer brojEcts;
+    private Integer semestar;
+    private final Integer brojObaveznihEcts=30;
+    private Integer brojIzbornihNaSemestru;
+    private Integer brojObaveznihNaSemestru;
+    private final Integer brojIzbornih=0;
+    private final Integer brojObaveznih=0;
 
-    public Student(String ime, String prezime, Integer brojIndexa, Semestar semestar) {
+    public Student(String ime, String prezime, Integer brojIndexa, Integer brojEcts, Integer semestar) {
         this.ime = ime;
         this.prezime = prezime;
         this.brojIndexa = brojIndexa;
@@ -31,26 +33,26 @@ public class Student {
         return brojIndexa;
     }
 
-    public Integer dajEctsBodovi() {
-        return ectsBodovi;
+    public Integer dajBrojEcts() {
+        return brojEcts;
     }
 
-    public Semestar dajSemestar() {
-        return semestar;
+    public Integer dajBrojIzbornihNaSemestru() {
+        return brojIzbornihNaSemestru;
     }
 
-    public Integer dajBrojIzbornih() {
-        return brojIzbornih;
+    public Integer dajBrojObaveznihhNaSemestru() {
+        return brojObaveznihNaSemestru;
     }
 
     public Integer dajBrojObaveznih() {
         return brojObaveznih;
     }
 
-    public ArrayList<Predmet> dajPredmeti() {
-        return predmeti;
-    }
-    public void dodajPredmet(Predmet predmet){
+    public Integer dajBrojIzbornih() { return brojIzbornih; }
 
-    }
+    public void postavibrojIzbornihNaSemestru(Integer broj) { this.brojIzbornihNaSemestru=broj; }
+
+    public void postavibrojObaveznihNaSemestru(Integer broj) { this.brojObaveznihNaSemestru=broj;  }
+
 }
