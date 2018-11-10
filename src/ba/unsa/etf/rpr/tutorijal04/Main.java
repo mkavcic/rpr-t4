@@ -53,5 +53,7 @@ public class Main {
         ETF.upisi(s6, bolonja, p3);
         ETF.upisi(s5,bolonja, p4);
 
+        String spisak=ETF.dajSpisak(p1);
+        System.out.print(spisak);
     }
 }
