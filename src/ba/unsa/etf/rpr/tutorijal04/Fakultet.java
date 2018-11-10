@@ -20,5 +20,6 @@ public class Fakultet {
         upisani.add(u);
     }
 
+    public void upisi(Student student, PlanStudija studij,  Predmet predmet){ upisani.add( new Upis(student, studij, predmet)); }
 }
 
