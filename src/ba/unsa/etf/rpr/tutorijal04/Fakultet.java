@@ -21,7 +21,21 @@ public class Fakultet {
         upisani.add(u);
     }
 
-    public void upisi(Student student, PlanStudija studij,  Predmet predmet){ upisani.add( new Upis(student, studij, predmet)); }
+    public void upisi(Student student, PlanStudija studij,  Predmet predmet){
+        upisani.add( new Upis(student, studij, predmet));
 
+    }
+
+    public String dajSpisak(Predmet p){
+        String c="";
+        for(Upis x: upisani){
+            String imePredmeta=x.getPredmet().dajIme();
+            String imeZadatog=p.dajIme();
+            if(imePredmeta.equals(imeZadatog)) {
+                c += x.getStudent().dajIme() + " " + x.getStudent().dajPrezime() + "\n";
+            }
+        }
+        return c;
+    }
 }
 
