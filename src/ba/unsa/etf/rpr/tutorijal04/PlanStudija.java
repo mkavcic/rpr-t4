@@ -1,8 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal04;
 
-import java.util.HashMap;
-import java.util.List;
-import  java.util.Map;
+import java.util.*;
 
 
 public class PlanStudija {
@@ -10,7 +8,18 @@ public class PlanStudija {
 
 
     public void dodajPredmet(Integer semestar, Predmet predmet) {
-        List<Predmet> predmeti = mapa.get(semestar);
-        if(predmeti!= null) predmeti.add(predmet);
+        Iterator<Map.Entry<Integer, List<Predmet>>> entries = mapa.entrySet().iterator();
+        while(entries.hasNext()){
+            var element = entries.next();
+            if(element.getKey().equals(semestar)){
+                List<Predmet> lista=element.getValue();
+                lista.add(predmet);
+            }
+            else{
+                List<Predmet> list1 = new ArrayList<>();
+                list1.add(predmet);
+                mapa.put(semestar, list1);
+            }
+        }
     }
 }
